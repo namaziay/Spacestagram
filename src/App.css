@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+body{
+  background-image:url('https://images.unsplash.com/photo-1608754482805-6f630357358b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.material-icons:hover{
+cursor:pointer;
+transform:scale(1.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  background-color:rgb(179, 179, 179);
+  max-width:30vw;
+  margin:auto;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius:20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container h2{
+  font-family:'Lobster', cursive;
+  color:white;
+  font-size:2rem;
+  width:90%;
+  margin:auto;
 }
 
-.App-link {
-  color: #61dafb;
+.h3{
+  width:90%;
+  margin:auto;
+  margin-top:10px;
+  margin-bottom:20px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.post-container{
+  width:90%;
+  margin:auto;
+  margin-bottom:10px;
+  padding:10px;
+  background-color:white;
+  border-radius:10px;
+}
+.post-container:hover{
+  transform:scale(1.01)
+}
+
+img{
+  min-width:100%;
+  max-width:100%;
+  max-height:250px;
+  border-radius:10px;
+}
+
+.post-container h5{
+  color:rgb(149, 146, 146);
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  top:50vh;
+  left:50vw;
+  /* transform:translate(-50%,-50%); */
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgb(11, 123, 244) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
