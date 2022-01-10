@@ -26,11 +26,14 @@ function App() {
     setLike(removedLike);
   }
 
-  useEffect(async()=>{
-    const response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${APIKEY}`)
-    const data = await response.json()
-    setMarsPhotos(data.photos)
-    setFetched(true)
+  useEffect(()=>{
+    async function fetchData(){
+      const response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${APIKEY}`)
+      const data = await response.json()
+      setMarsPhotos(data.photos)
+      setFetched(true)
+    }
+    fetchData();
   },[fetched])
 
   useEffect(()=>{
