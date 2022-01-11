@@ -38,13 +38,16 @@ function App() {
 
   useEffect(()=>{
     setLike(JSON.parse(window.localStorage.getItem('like')))
+    if(!like){
+      setLike([])
+    }
   },[])
   useEffect(()=>{
     if(like){
     window.localStorage.setItem('like',JSON.stringify(like))
     }
     else{
-      window.localStorage.setItem('like',JSON.stringify([]))
+      setLike([])
     }
   },[like])
   return (
