@@ -40,7 +40,12 @@ function App() {
     setLike(JSON.parse(window.localStorage.getItem('like')))
   },[])
   useEffect(()=>{
+    if(like){
     window.localStorage.setItem('like',JSON.stringify(like))
+    }
+    else{
+      window.localStorage.setItem('like',JSON.stringify([]))
+    }
   },[like])
   return (
     <>
