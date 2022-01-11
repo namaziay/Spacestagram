@@ -59,7 +59,7 @@ function App() {
                 <h5>{photo.earth_date}</h5>
                 <div>
                 {
-                like.includes(photo.id)===false?
+                like?.includes(photo.id)===false?
                 <i onClick = {()=>likeHandler(photo.id)} className="material-icons">favorite</i>:
                 <i onClick = {()=>removeHandler(photo.id)} className="material-icons red-text" aria-hidden="true" style={{ color: 'red' }}>favorite</i>
                  }
